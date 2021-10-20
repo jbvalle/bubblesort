@@ -8,7 +8,7 @@
 CC = gcc
 
 #declare all linkerflags
-CFLAGS = -g -Wall -Wall -Wextra -pedantic
+CFLAGS = -g -Wall -Wextra -pedantic
 LFLAGS= -lm
 #declare Sources and Binaries
 SRCS := $(wildcard *.c)

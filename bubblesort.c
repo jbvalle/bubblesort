@@ -9,6 +9,7 @@ int main(void)
     // random numbers on every program run
     int sorting_area[100];
     int inital_value_buffer;
+    int detection_flag = 0;
 
     for (int i = 0; i < 100; i++) {
       //Generating random numbers -> assigning to sorting_area
@@ -17,15 +18,19 @@ int main(void)
     }
 
     printf("\n\n\n");
-    for (int j = 0; j < 100-1; j++) {
+    
+    for (int z = 0; z < 100-1; z++) {
+      for (int j = 0; j < 100-1; j++) {
 
-      if (sorting_area[j] > sorting_area[j + 1]){
+        if (sorting_area[j] > sorting_area[j + 1]){
 
-        sorting_area[j] = inital_value_buffer;
-        sorting_area[j] = sorting_area[j + 1];
-        sorting_area[j + 1] = inital_value_buffer;
+          inital_value_buffer = sorting_area[j];
+          sorting_area[j] = sorting_area[j + 1];
+          sorting_area[j + 1] = inital_value_buffer;
+        }
       }
     }
+
     for (int k = 0; k < 100; k++) {
       printf("%d ", sorting_area[k]);
     }
