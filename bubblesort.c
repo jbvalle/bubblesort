@@ -22,11 +22,11 @@ int main(void)
 
     printf("\n\n\n");
 
-    for (int z = 0; z < num_of_rand; z++) {
+    for (int z = 0; z < num_of_rand-1; z++) {
 
       detection_flag = 0;
 
-      for (int j = 0; j < num_of_rand; j++) {
+      for (int j = 0; j < num_of_rand-1; j++) {
 
         if (sorting_area[j] > sorting_area[j + 1]){
 
@@ -64,4 +64,5 @@ void show_sorting_area(int sorting_area[]){
   for (int k = 0; k < num_of_rand; k++) {
     printf("%d ", sorting_area[k]);
   }
+  printf("\n"); 
 }
