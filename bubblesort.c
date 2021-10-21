@@ -37,9 +37,6 @@ int main(void)
         }
       }
       if (detection_flag == 0) break;
-      show_sorting_area(sorting_area);
-      printf("\n");
-      printf("\n\nItterations: %d\n", z);
     }
 
 
