@@ -1,6 +1,6 @@
-#define max_generatable_rand_num 32767
 #include <stdio.h>
 #include <stdlib.h>
+//#include <time.h> //for srand()
 int randomizer(int);
 
 int main(void)
@@ -18,9 +18,9 @@ int main(void)
     }
 
     printf("\n\n\n");
-    
-    for (int z = 0; z < 100-1; z++) {
-      for (int j = 0; j < 100-1; j++) {
+
+    for (int z = 0; z < 100; z++) {
+      for (int j = 0; j < 100; j++) {
 
         if (sorting_area[j] > sorting_area[j + 1]){
 
@@ -43,8 +43,9 @@ int main(void)
 //0 .... input_rand_area
 int randomizer(int input_rand_area){
 
-  float rand_num = rand();
-  rand_num = (rand_num/max_generatable_rand_num) * input_rand_area;
+  //srand sets rand seed from current time to generate random number
+  //srand(time(0));
+  float rand_num = (rand() % 100) + 1;
 
   return rand_num;
 }
