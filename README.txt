@@ -1,4 +1,5 @@
 Author: John Bryan Valle
+Jahrgang: ic21
 Project: bubblesort
 
 This Project aimes to demonstrate a simple application of the
@@ -26,3 +27,6 @@ Building Process & Execution:
 
 3. Type positive number to determine random field size
 i.e. : 100
+
+4. Bei Fehlermeldung eventuell:
+: make clean
