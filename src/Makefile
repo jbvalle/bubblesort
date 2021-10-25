@@ -36,7 +36,7 @@ all: $(TARGET) $(OBJF)
 $(TARGET): $(OBJF)
 	$(CC) -o $@ $^ $(LFLAGS) $(CFLAGS)
 
-$(ODIR)/%.o: %.c $(HEADERS)
+$(ODIR)/%.o: %.c
 	$(CC) -c -o $@ $^ $(CFLAGS)
 
 #clean target
