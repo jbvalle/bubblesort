@@ -1,0 +1,28 @@
+Author: John Bryan Valle
+Project: bubblesort
+
+This Project aimes to demonstrate a simple application of the
+bubblesort sorting algorithm.
+- the project is implemented in a basic file system:
+/bubblesort:
+|
+|---------------/bubblesort/src: *.c, .exe/.elf, Makefile (Important for Build!)
+|               |
+|               |---------------/bubblesort/src/obj: *.o
+|
+|---------------/bubblesort/include: *.h
+
+Features:
+1. All random numbers are unique without duplicates
+2. The Sorting Algorithm is demonstrated in an increasing and decreasing order
+
+Building Process & Execution:
+
+1. Build Project from bubblesort/src directory:
+: make
+
+2. Execute main program with:
+: ./main or main
+
+3. Type positive number to determine random field size
+i.e. : 100
