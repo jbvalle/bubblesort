@@ -30,12 +30,12 @@ int main(void)
     show_random_array(random_array,sizeof_array);
 
     printf("\nBubble Sorted Increasing: \n");
-    int* bubble_sort = bubblesort_increasing(random_array, sizeof_array);
-    show_random_array(bubble_sort,sizeof_array);
+    int* bubble_sort = bubblesort_increasing(random_array, 20);
+    show_random_array(bubble_sort,20);
 
     printf("\nBubble Sorted Decreasing: \n");
-    int* bubble_sort_reverse = bubblesort_decreasing(random_array, sizeof_array);
-    show_random_array(bubble_sort_reverse,sizeof_array);
+    int* bubble_sort_reverse = bubblesort_decreasing(random_array, 20);
+    show_random_array(bubble_sort_reverse,20);
     printf("\n");
 
     return 0;
