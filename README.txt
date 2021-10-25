@@ -1,6 +1,10 @@
-Author: John Bryan Valle
-Jahrgang: ic21
-Project: bubblesort
+_____________________________________________________
+
+|****************************|
+|Author: John Bryan Valle    |
+|Jahrgang: IC21              |
+|Project: bubblesort         |
+|****************************|
 
 This Project aimes to demonstrate a simple application of the
 bubblesort sorting algorithm.
@@ -27,6 +31,3 @@ Building Process & Execution:
 
 3. Type positive number to determine random field size
 i.e. : 100
-
-4. Bei Fehlermeldung eventuell:
-: make clean
