@@ -6,11 +6,11 @@ bubblesort sorting algorithm.
 - the project is implemented in a basic file system:
 /bubblesort:
 |
-|---------------/bubblesort/src: *.c, .exe/.elf, Makefile (Important for Build!)
+|----/bubblesort/src: *.c, .exe/.elf, Makefile (Important for Build!)
 |               |
-|               |---------------/bubblesort/src/obj: *.o
+|               |----/bubblesort/src/obj: *.o
 |
-|---------------/bubblesort/include: *.h
+|----/bubblesort/include: *.h
 
 Features:
 1. All random numbers are unique without duplicates
