@@ -27,3 +27,6 @@ Building Process & Execution:
 
 3. Type positive number to determine random field size
 i.e. : 100
+
+4. Bei Fehlermeldung eventuell:
+: make clean
