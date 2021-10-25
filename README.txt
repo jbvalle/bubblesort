@@ -29,6 +29,9 @@ Features:
 | 2. Execute main program with:                           |
 | : ./main or main                                        |
 |                                                         |
-| 3. Type positive number to determine random field size  |
+| 3. Type range of number i.e. 100 -> range: 0...100      |
 | i.e. : 100                                              |
+|                                                         |
+| 4. Type number of elements to be sorted from range      |
+| i.e. : 20                                               |
 |*********************************************************|

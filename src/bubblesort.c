@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *bubblesort_increasing(int *random_array, int abs_rand_range){
+int *bubblesort_increasing(int *random_array, int sizeof_array){
 
-  for (int i = 0; i < abs_rand_range-1; i++) {
+  for (int i = 0; i < sizeof_array-1; i++) {
 
     int allignment_flag = 0;
 
-    for (int j = 0; j < abs_rand_range-1; j++) {
+    for (int j = 0; j < sizeof_array-1; j++) {
 
       if (random_array[j] > random_array[j + 1]){
 
@@ -23,13 +23,13 @@ int *bubblesort_increasing(int *random_array, int abs_rand_range){
   return random_array;
 }
 
-int *bubblesort_decreasing(int *random_array, int abs_rand_range){
+int *bubblesort_decreasing(int *random_array, int sizeof_array){
 
-  for (int i = 0; i < abs_rand_range-1; i++) {
+  for (int i = 0; i < sizeof_array-1; i++) {
 
     int allignment_flag = 0;
 
-    for (int j = 0; j < abs_rand_range-1; j++) {
+    for (int j = 0; j < sizeof_array-1; j++) {
 
       if (random_array[j] < random_array[j + 1]){
 
