@@ -21,13 +21,14 @@ Features:
 1. All random numbers are unique without duplicates
 2. The Sorting Algorithm is demonstrated in an increasing and decreasing order
 
-Building Process & Execution:
-
-1. Build Project from bubblesort/src directory:
-: make
-
-2. Execute main program with:
-: ./main or main
-
-3. Type positive number to determine random field size
-i.e. : 100
+|*****Building Process & Execution:***********************|
+|                                                         |
+| 1. Build Project from bubblesort/src directory:         |
+| : make                                                  |
+|                                                         |
+| 2. Execute main program with:                           |
+| : ./main or main                                        |
+|                                                         |
+| 3. Type positive number to determine random field size  |
+| i.e. : 100                                              |
+|*********************************************************|
