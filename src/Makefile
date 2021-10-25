@@ -30,7 +30,7 @@ CFLAGS = -g -Wall -Wextra -pedantic -I$(IDIR)
 LFLAGS= -lm
 
 #define the "all" target
-all: clean $(TARGET) $(OBJF)
+all: clean SHOW_README $(TARGET) $(OBJF)
 
 #target <- objectfiles
 $(TARGET): $(OBJF)
@@ -39,6 +39,9 @@ $(TARGET): $(OBJF)
 $(ODIR)/%.o: %.c
 	$(CC) -c -o $@ $^ $(CFLAGS)
 
+#README
+SHOW_README:
+	cat ../README.txt
 #clean target
 clean:
 	echo "Cleaning Up"

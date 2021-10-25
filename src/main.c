@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "bubblesort.h"
-#include "randomizer.h"
+#include "../include/bubblesort.h"
+#include "../include/randomizer.h"
 
 void show_random_array(int *random_array, int abs_rand_range){
 
@@ -28,12 +28,12 @@ int main(void)
     show_random_array(random_array,abs_rand_range);
 
     printf("\nBubble Sorted Increasing: \n");
-    int* bubble_sort = bubblesort_increasing(random_array, abs_rand_range);
-    show_random_array(bubble_sort,abs_rand_range);
+    int* bubble_sort = bubblesort_increasing(random_array, 20);
+    show_random_array(bubble_sort,20);
 
     printf("\nBubble Sorted Decreasing: \n");
-    int* bubble_sort_reverse = bubblesort_decreasing(random_array, abs_rand_range);
-    show_random_array(bubble_sort_reverse,abs_rand_range);
+    int* bubble_sort_reverse = bubblesort_decreasing(random_array, 20);
+    show_random_array(bubble_sort_reverse,20);
     printf("\n");
 
     return 0;
