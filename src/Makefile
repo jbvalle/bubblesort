@@ -30,16 +30,19 @@ CFLAGS = -g -Wall -Wextra -pedantic -I$(IDIR)
 LFLAGS= -lm
 
 #define the "all" target
-all: clean $(TARGET) $(OBJF)
+all: clean README $(TARGET) $(OBJF)
 
 #target <- objectfiles
 $(TARGET): $(OBJF)
-	$(CC) -o $@ $^ $(LFLAGS) $(CFLAGS)
+	@$(CC) -o $@ $^ $(LFLAGS) $(CFLAGS)
 
 $(ODIR)/%.o: %.c
-	$(CC) -c -o $@ $^ $(CFLAGS)
+	@$(CC) -c -o $@ $^ $(CFLAGS)
+
+README:
+	@cat ../README.txt
 
 #clean target
 clean:
-	echo "Cleaning Up"
-	rm -rvf $(ODIR)/*.o *.exe ${BINS}
+	@echo Cleaning Up
+	@rm -rvf $(ODIR)/*.o *.exe ${BINS}
