@@ -30,7 +30,7 @@ CFLAGS = -g -Wall -Wextra -pedantic -I$(IDIR)
 LFLAGS= -lm
 
 #define the "all" target
-all: $(TARGET) $(OBJF)
+all: clean $(TARGET) $(OBJF)
 
 #target <- objectfiles
 $(TARGET): $(OBJF)
