@@ -14,15 +14,16 @@ LFLAGS= -lm
 SRCS := $(wildcard *.c)
 OBJF := $(SRCS:%.c=%.o)
 BINS := $(SRCS:%.c=%)
+TARGET := main
 
 #define the "all" target
-all: $(OBJF) $(BINS) cleanobj
+all: $(TARGET) $(OBJF) cleanobj
 
 #target <- objectfiles
-%: %.o
+$(TARGET): $(OBJF)
 	$(CC) $(CFLAGS) -o $@ $^ $(LFLAGS)
 
-%.o: %.c
+$(OBJF): $(SRCS)
 	$(CC) -c $^
 
 cleanobj:

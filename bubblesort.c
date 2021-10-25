@@ -1,65 +1,47 @@
-#define num_of_rand 100
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int randomizer(int);
-void show_sorting_area(int sorting_area[]);
+int *bubblesort_increasing(int *random_array, int abs_rand_range){
 
-int main(void)
-{
-    // This program will create same sequence of
-    // random numbers on every program run
-    int sorting_area[num_of_rand];
-    int inital_value_buffer;
-    int detection_flag;
+  for (int i = 0; i < abs_rand_range-1; i++) {
 
-    for (int i = 0; i < num_of_rand; i++) {
-      //Generating random numbers -> assigning to sorting_area
-      sorting_area[i] = randomizer(num_of_rand);
-      printf("%d ", sorting_area[i]);
-    }
+    int allignment_flag = 0;
 
-    printf("\n\n\n");
+    for (int j = 0; j < abs_rand_range-1; j++) {
 
-    for (int z = 0; z < num_of_rand-1; z++) {
+      if (random_array[j] > random_array[j + 1]){
 
-      detection_flag = 0;
-
-      for (int j = 0; j < num_of_rand-1; j++) {
-
-        if (sorting_area[j] > sorting_area[j + 1]){
-
-          inital_value_buffer = sorting_area[j];
-          sorting_area[j] = sorting_area[j + 1];
-          sorting_area[j + 1] = inital_value_buffer;
-          detection_flag = 1;
-        }
+        int initial_value_buffer = random_array[j];
+        random_array[j] = random_array[j + 1];
+        random_array[j + 1] = initial_value_buffer;
+        allignment_flag = 1;
       }
-      if (detection_flag == 0) break;
     }
-
-
-    show_sorting_area(sorting_area);
-    return 0;
-}
-
-//Generates random number area
-//input_rand_area determines max value for random numbers from
-//0 .... input_rand_area
-int randomizer(int num){
-
-  //srand sets rand seed from current time to generate random number
-  //srand(time(0));
-  float rand_num = (rand() % num) + 1;
-
-  return rand_num;
-}
-
-void show_sorting_area(int sorting_area[]){
-
-  for (int k = 0; k < num_of_rand; k++) {
-    printf("%d ", sorting_area[k]);
+    //Once all numbers have been ordered break the loop
+    if (allignment_flag == 0) break;
   }
-  printf("\n"); 
+  return random_array;
+}
+
+int *bubblesort_decreasing(int *random_array, int abs_rand_range){
+
+  for (int i = 0; i < abs_rand_range-1; i++) {
+
+    int allignment_flag = 0;
+
+    for (int j = 0; j < abs_rand_range-1; j++) {
+
+      if (random_array[j] < random_array[j + 1]){
+
+        int initial_value_buffer = random_array[j];
+        random_array[j] = random_array[j + 1];
+        random_array[j + 1] = initial_value_buffer;
+        allignment_flag = 1;
+      }
+    }
+    //Once all numbers have been ordered break the loop
+    if (allignment_flag == 0) break;
+  }
+
+  return random_array;
 }
